@@ -15,7 +15,9 @@ with open(f"{dir}\dir.html", "w", encoding="utf-8") as página:
 <ul>
  """)
     for c in os.listdir(dir):
+        print(c)
         if os.path.isfile(c):
+            print(c)
             if s[len(s)-3:len(s)] == "jpg" or s[len(s)-3:len(s)] == "png":
                 página.write(f"<li><a href=\"url\">{dir}\{c}</a></li>")
             else:

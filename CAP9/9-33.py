@@ -15,12 +15,11 @@ with open(f"{dir}\dir.html", "w", encoding="utf-8") as página:
 <ul>
  """)
     for c in os.listdir(dir):
-        print(c)
-        if os.path.isfile(c):
+        #if os.path.isfile(c):
+        if c[len(c)-3:len(c)] == "jpg" or c[len(c)-3:len(c)] == "png":
             print(c)
-            if s[len(s)-3:len(s)] == "jpg" or s[len(s)-3:len(s)] == "png":
-                página.write(f"<li><a href=\"url\">{dir}\{c}</a></li>")
-            else:
-                página.write(f"<li>{dir}\{c}</li>")
+            página.write(f"<li><a href=\"url\">{dir}\{c}</a></li>")
+        else:
+            página.write(f"<li>{dir}\{c}</li>")
     página.write("</ul>\n")
     página.write("</body></html>")

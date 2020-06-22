@@ -11,7 +11,7 @@ for chave, dados in estoque.items():
     print("Descrição: ", chave)
     print("Quantidade: ", dados[0])
     print(f"Preço: {dados[1]:6.2f}\n")
-    
+
 while True:
     produto = input("informe o produto (S para sair): ")
     if produto == "s":
@@ -28,11 +28,8 @@ while True:
         print("produto informado não encontrado\n")
         print("informe novamente")
 
-
 total = 0
-print(venda)
 print("Vendas:\n")
-
 
 for operação in venda:
     produto, quantidade = operação

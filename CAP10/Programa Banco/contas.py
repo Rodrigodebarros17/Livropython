@@ -11,6 +11,10 @@ class Conta:
         if self.saldo >= valor:
             self.saldo -= valor
             self.operacoes.append(["SAQUE", valor])
+        else:
+            print("Operação não efetuado")
+            self.operacoes.append("Saque não efetuado por saldo insuficiente")
+
     def deposito(self, valor):
         self.saldo += valor
         self.operacoes.append(["DEPOSITO", valor])
@@ -28,5 +32,8 @@ class ContaEspecial(Conta):#1
         if self.saldo + self.limite >= valor:
             self.saldo -= valor
             self.operacoes.append(["SAQUE", valor])
+        else:
+            print("Operação não efetuado")
+            self.operacoes.append("Saque não efetuado por saldo insuficiente")
 
 
